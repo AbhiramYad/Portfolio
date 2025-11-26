@@ -1,0 +1,81 @@
+/* Kidzee page stylesheet - responsive, kid-friendly layout */
+:root{
+    --bg: #fff9f2;
+    --accent: #ff7aa2;
+    --muted: #6b6b6b;
+    --card: #ffffff;
+    --max-width: 980px;
+    --radius: 12px;
+}
+
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #fff 0%, var(--bg) 100%);
+    color: #222;
+    line-height:1.45;
+    -webkit-font-smoothing:antialiased;
+}
+
+.container{
+    max-width:var(--max-width);
+    margin:28px auto;
+    padding:20px;
+}
+
+h1{
+    color:var(--accent);
+    font-size:2.2rem;
+    margin:0 0 12px 0;
+    text-align:center;
+}
+
+h2{
+    color:#333;
+    font-size:1.25rem;
+    margin:18px 0 8px;
+    border-left:6px solid var(--accent);
+    padding-left:10px;
+    background: linear-gradient(90deg, rgba(255,122,162,0.06), transparent);
+    border-radius:6px;
+    display:inline-block;
+}
+
+p{margin:10px 0;color:var(--muted)}
+
+img{max-width:100%;height:auto;border-radius:10px;display:block}
+
+/* Lists */
+ol{padding-left:1.1rem;margin:10px 0}
+li{margin:6px 0}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:12px 0;background:var(--card);border-radius:8px;overflow:hidden}
+table th, table td{padding:10px;text-align:left;border-bottom:1px solid #eee;vertical-align:top}
+table th{background:#fafafa;font-weight:600}
+table tr:last-child td{border-bottom:0}
+
+/* Make images inside table cells constrained */
+table td img{width:120px;max-width:100%;height:auto;border-radius:6px}
+
+/* Form styling */
+form{background:rgba(255,255,255,0.9);padding:16px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.06);margin:14px 0}
+label{display:block;font-size:0.95rem;margin-bottom:6px;color:#333}
+input[type='text'], input[type='email'], input[type='tel'], input[type='date'], textarea{
+    width:100%;padding:8px 10px;border:1px solid #e6e6e6;border-radius:8px;margin-bottom:12px;font-size:0.95rem
+}
+input[type='submit'], input[type='reset']{background:var(--accent);color:#fff;padding:10px 14px;border:0;border-radius:8px;cursor:pointer;margin-right:8px}
+input[type='reset']{background:#888}
+
+/* Responsive layout tweaks */
+@media (min-width:720px){
+    .grid-2{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start}
+}
+
+/* Small accessibility helpers */
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Utility */
+.muted{color:var(--muted);font-size:0.95rem}
