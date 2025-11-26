@@ -54,6 +54,7 @@ Update the social links in the footer with your GitHub, LinkedIn, and other prof
 - Safari
 - Edge
 - Mobile browsers
+https://abhiramyad.github.io/Portfolio/
 
 ## License
 
